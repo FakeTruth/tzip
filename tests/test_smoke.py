@@ -8,7 +8,8 @@ def test_importable():
 
 def test_sorter_cli_echo(tmp_path):
     # Run the module as a script
-    subprocess.run(
+    res = subprocess.run(
         [sys.executable, "-m", "tzip.tzip"],
+        input=b"q",
         check=True,
     )

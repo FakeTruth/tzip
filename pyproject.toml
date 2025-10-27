@@ -12,7 +12,7 @@ license = {text = "MIT"}
 authors = [ {name = "FakeTruth"} ]
 requires-python = ">=3.8"
 
-dependencies = []
+dependencies = ["textual", "py7zr", "rarfile"]
 
 keywords = ["zip", "7z", "rar", "tar", "tui", "textual"]
 
@@ -40,6 +40,9 @@ dev = ["pytest>=6.0"]
 
 [tool.setuptools.packages.find]
 where = ["."]
+
+[tool.setuptools.package-data]
+"tzip" = ["*.tcss"]
 
 [tool.setuptools_scm]
 # Derive version from Git; on non-tag commits you'll get 1.0.0.devN+g<sha> style versions.
